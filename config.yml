@@ -1,0 +1,38 @@
+#
+# Configurations should go here
+#
+
+# Index is mandatory.
+INDEX=
+
+# Output dir to store the csv file. default is current dir.
+#OUTPUT_PATH=
+
+# ElasticSearch Host and Port.
+# Default host is localhost. Default port is 9200.
+ES_HOST=localhost
+ES_PORT=9200
+
+# This should be proper elasticsearch query. i.e. VALID Json
+QUERY="query": {"bool": {"must":[{"match_all": {}}]}}
+
+# Required source fields to be exported to csv from elasticsearch. Default is ALL fields.
+#SOURCE=field1,field2,field3
+
+# from(start offset) in elasticsearch. default is 0.
+FROM=0
+
+# size in elasticsearch. default is 10.
+SIZE=10
+
+# Should pagination be enabled?. Default is false.
+# Enable pagination to download all data into csv.
+# Start offset will be "from" field value(Check above fields)
+#EnablePagination=false
+
+# Read timeout in elasticsearch. Default is 10.
+TIMEOUT=10
+
+# Delimiter for CSV file. Default is "tab".
+# Only "tab" and "comma" are supported.
+DELIMITER=comma
