@@ -39,7 +39,7 @@ def getESConnection():
 #
 ## Module to query elasticsearch and store in CSV
 #
-def getDatatoCSV():
+def fetchDatatoCSV():
 
     global INDEX
     global SOURCE
@@ -99,7 +99,7 @@ def getDatatoCSV():
     			hit['_source'][key] = "key_missed"
     
     	filewriter.writerow([hit['_source'][key] for key in SOURCE])
-# End of getDatatoCSV
+# End of fetchDatatoCSV
 
 # Logger
 def enableLog():
@@ -195,7 +195,7 @@ def main():
     getESConnection()
     logger.debug('Connected to ElasticSearch')
 
-    getDatatoCSV()
+    fetchDatatoCSV()
     logger.debug('Data is exported to CSV')
 
     logger.debug('Script Finished')
