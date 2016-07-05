@@ -1,8 +1,8 @@
-# ES-to-CSV-plugin
-Plugin to download data from ES into CSV format
+# ES-to-CSV
+Tool to download data from ES into CSV format
 
-# How to use this plugin?
-Step 1: Download Source code (both config.yml and es_to_csv_plugin.py)<br />
+# How to use this tool?
+Step 1: Download Source code (both config.yml and es_to_csv.py)<br />
 Step 2: Go through config.yml to understand the configurations required<br />
 Step 3: Provide Index name in config.yml<br />
 Step 4: Configure other parameters accordingly<br />
